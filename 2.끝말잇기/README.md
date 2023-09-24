@@ -5,19 +5,19 @@
     - input 안에 있는 value를 지우고 언컨트롤드 인풋으로 전환
     - 간단한 경우만 사용
     - defaultValue 사용
-'''
-const onSubmitForm = (e) => {
-    e.preventDefault();
-    if (word[word.length - 1] === e.target.children.word.value[0]) {
-        setResult('딩동댕');
-        setWord(e.target.children.word.value);
-        e.target.children.word.value = '';
-        inputRef.current.focus();
-    }else {
-        setResult('땡');
-        e.target.children.word.value = '';
-        inputRef.current.focus();
-    }
-};
+```
+    const onSubmitForm = (e) => {
+        e.preventDefault();
+        if (word[word.length - 1] === e.target.children.word.value[0]) {
+            setResult('딩동댕');
+            setWord(e.target.children.word.value);
+            e.target.children.word.value = '';
+            inputRef.current.focus();
+        }else {
+            setResult('땡');
+            e.target.children.word.value = '';
+            inputRef.current.focus();
+        }
+    };
 
-'''
+```
